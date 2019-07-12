@@ -1,0 +1,1 @@
+Max,Angel,60,30,120,Sword,10,Cloth,9,Cap,5,2,1,0,1

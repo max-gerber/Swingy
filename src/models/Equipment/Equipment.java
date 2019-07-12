@@ -1,9 +1,13 @@
-package src.Equipment;
+package src.models.Equipment;
 
 public class Equipment {
+	protected String	equipmentType;
 	protected String	type;
 	protected int		bonus;
 
+	public String	getEquipmentType() {
+		return this.equipmentType;
+	}
 	public String	getType() {
 		return this.type;
 	}

@@ -1,18 +1,17 @@
-package src.Equipment;
+package src.models.Equipment;
 
 public class Armour extends Equipment {
-	public	Armour(int typeSelector, int bonus) {
-		switch (typeSelector) {
-			case 0:
-				this.type = "Cloth";
+	public	Armour(String type, int bonus) {
+		this.equipmentType = "Armour";
+		this.type = type + " Armour";
+		switch (type) {
+			case "Cloth":
 				this.bonus = (int) Math.round(new Double(bonus) * 0.75);
 				break;
-			case 1:
-				this.type = "Chainmail Armour";
+			case "Chainmail":
 				this.bonus = bonus;
 				break;
-			case 2:
-				this.type = "Plate Armour";
+			case "Plate":
 				this.bonus = (int) Math.round(new Double(bonus) * 1.5);
 				break;
 		}

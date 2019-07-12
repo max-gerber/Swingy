@@ -1,22 +1,20 @@
-package src.Equipment;
+package src.models.Equipment;
 
 public class Weapon extends Equipment{
-	public	Weapon(int typeSelector, int bonus) {
-		switch (typeSelector) {
-			case 0:
-				this.type = "Dagger";
+	public	Weapon(String type, int bonus) {
+		this.equipmentType = "Weapon";
+		this.type = type;
+		switch (type) {
+			case "Dagger":
 				this.bonus = (int) Math.round(new Double(bonus) * 0.75);
 				break;
-			case 1:
-				this.type = "Sword";
+			case "Sword":
 				this.bonus = bonus;
 				break;
-			case 2:
-				this.type = "Spear";
+			case "Spear":
 				this.bonus = (int) Math.round(new Double(bonus) * 1.5);
 				break;
-			case 3:
-				this.type = "War-Axe";
+			case "War-Axe":
 				this.bonus = (int) Math.round(new Double(bonus) * 2);
 		}
 	}
