@@ -6,7 +6,7 @@
     <property name="java.vm.version" value="25.211-b12"/>
     <property name="gopherProxySet" value="false"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="/goinfre/mgerber/Java/Swing/Swingy"/>
+    <property name="maven.multiModuleProjectDirectory" value="/goinfre/mgerber/Java/Swingy"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=":"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/goinfre/mgerber/Java/Swing/Swingy"/>
+    <property name="user.dir" value="/goinfre/mgerber/Java/Swingy"/>
     <property name="java.runtime.version" value="1.8.0_211-b12"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/jre/lib/endorsed"/>
@@ -33,7 +33,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="10.14.5"/>
+    <property name="os.version" value="10.14.6"/>
     <property name="library.jansi.path" value="/goinfre/mgerber/.brew/Cellar/maven/3.6.1/libexec/lib/jansi-native"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="user.home" value="/goinfre/mgerber"/>

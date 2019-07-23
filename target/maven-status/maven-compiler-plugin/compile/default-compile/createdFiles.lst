@@ -1,4 +1,5 @@
 Swingy/models/Equipment/Equipment.class
+Swingy/controllers/GuiGame$1.class
 Swingy/models/Enemies/Enemy.class
 Swingy/views/Dungeon.class
 Swingy/models/Equipment/Weapon.class
@@ -6,10 +7,11 @@ Swingy/models/Equipment/Armour.class
 Swingy/App.class
 Swingy/views/Battle.class
 Swingy/models/Heros/Knight.class
-Swingy/controllers/Game.class
+Swingy/controllers/GuiGame.class
 Swingy/models/Heros/Hero.class
 Swingy/models/Heros/Orc.class
 Swingy/models/Equipment/Helm.class
 Swingy/models/Heros/Angel.class
 Swingy/models/Heros/ExistingHero.class
 Swingy/views/HeroCreation.class
+Swingy/controllers/ConsoleGame.class
