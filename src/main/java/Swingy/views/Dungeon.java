@@ -18,4 +18,10 @@ public class Dungeon {
 		}
 		System.out.println("Type UP DOWN LEFT or RIGHT to move in those directions or EXIT to leave the dungeon");
 	}
+	public static void levelUp(int level) {
+		System.out.println("#\tYou have leveled up to level " + level + "\t#");
+	}
+	public static void exit() {
+		System.out.println("I hope you found what you were looking for.\nIf not, the dungeon will be here waiting for you...");
+	}
 }

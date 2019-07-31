@@ -1,12 +1,8 @@
 package Swingy.views;
 
-import Swingy.controllers.ConsoleGame;
 import Swingy.models.Equipment.*;
 import Swingy.models.Enemies.*;
 import Swingy.models.Heros.*;
-
-import java.util.Random;
-import java.util.Scanner;
 
 public class Battle {
 	public static void battle(Enemy enemy, Hero player, boolean evasion) {
@@ -37,6 +33,18 @@ public class Battle {
 	public static void failRun() {
 		System.out.println("You failed to get away...");
 	}
+	public static void hit() {
+		System.out.println("#\tYou were hit\t#");
+	}
+	public static void damage(String enemyType) {
+		System.out.println("#\tYou hit the " + enemyType + "\t#");
+	}
+	public static void miss() {
+		System.out.println("You both missed");
+	}
+	public static void noPotions() {
+		System.out.println("You have no potions available");
+	}
 	public static int victory(Enemy enemy, int experience, Hero player) {
 		System.out.println("#\tYou have vanquished the " + enemy.getType() + "\t#");
 			System.out.println("#\tYou have earned " + experience + " points\t#");
@@ -56,7 +64,7 @@ public class Battle {
 	public static void curse() {
 		System.out.println("#\tIt was probbably cursed anyway\t#");
 	}
-	public static void potion(Enemy enemy) {
+	public static void droppedPotion(Enemy enemy) {
 		System.out.println("#\tThe " + enemy.getType() + " has dropped a potion\t#");
 		System.out.println("#\tWould you like to pick it up?\t#");
 	}

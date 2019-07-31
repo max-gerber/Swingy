@@ -2,6 +2,7 @@ package Swingy.models.Enemies;
 
 import java.util.Random;
 import Swingy.models.Equipment.*;
+import Swingy.views.*;
 
 public class Enemy {
 	private String	type;
@@ -39,7 +40,7 @@ public class Enemy {
 	public void		hit(int damage) {
 		if (damage > this.defence){
 			this.health -= (damage - this.defence);
-			System.out.println("#\tYou hit the " + this.type + "\t#");
+			Battle.damage(this.type);
 		}
 	}
 	

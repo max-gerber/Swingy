@@ -2,10 +2,14 @@ package Swingy.models.Heros;
 
 import Swingy.models.Equipment.*;
 import Swingy.models.Enemies.*;
+import Swingy.views.*;
 
 import java.util.Random;
 
+import javax.validation.constraints.NotNull;
+
 public class Hero {
+	@NotNull
 	protected String	name;
 	protected String	type;
 	protected int		attack;
@@ -37,7 +41,7 @@ public class Hero {
 	}
 	public void		gainExperience(int experience) {
 		if ((this.experience + experience) > ((level * 1000) + (Math.pow(level - 1, 2) * 450))){
-			System.out.println("#\tYou have leveled up to level " + level + "\t#");
+			Dungeon.levelUp(level);
 			this.experience = (int) ((this.experience + experience) - ((level * 1000) + (Math.pow(level - 1, 2) * 450)));
 			level++;
 			return;
@@ -45,20 +49,27 @@ public class Hero {
 		this.experience += experience;
 	}
 	public void		fight(Enemy enemy) {
-		Random rand = new Random();
+		Random	rand = new Random();
+		boolean	enemyHit = false;
+		boolean	playerHit = false;
 		if (rand.nextInt(2) == 0){
 			enemy.hit(this.attack);
+			enemyHit = true;
 		}
 		if (rand.nextInt(2) == 0){
 			if (enemy.getAttack() > this.defence){
 				this.health -= (enemy.getAttack() - defence);
-				System.out.println("#\tYou were hit\t#");
+				Battle.hit();
+				playerHit = true;
 			}
+		}
+		if (!(enemyHit || playerHit)){
+			Battle.miss();
 		}
 	}
 	public void		usePotion() {
 		if (this.potions == 0){
-			System.out.println("You have no potions available");
+			Battle.noPotions();
 			return;
 		}
 		this.health += 100;

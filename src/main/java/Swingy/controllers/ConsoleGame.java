@@ -180,7 +180,7 @@ public class ConsoleGame {
 					}
 					}
 					if (rand.nextInt(5) == 0){
-						Battle.potion(enemy);
+						Battle.droppedPotion(enemy);
 						String pickUp = in.nextLine().toUpperCase();
 						switch (pickUp) {
 							case "YES":
@@ -193,9 +193,11 @@ public class ConsoleGame {
 					in.nextLine();
 				} else if (player.getHealth() <= 0) {
 					Battle.defeat();
+					in.close();
 					return;
 				}
 			}
+			in.close();
 		try {
 			File file = new File("Saved.txt");
 			FileWriter fr = new FileWriter(file, true);
@@ -204,6 +206,5 @@ public class ConsoleGame {
 		} catch (IOException e) {
 			System.out.println(e.getMessage());
 		}
-		in.close();
 	}
 }

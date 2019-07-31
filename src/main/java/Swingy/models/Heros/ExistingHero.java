@@ -1,7 +1,6 @@
 package Swingy.models.Heros;
 
 import Swingy.models.Equipment.*;
-// import src.models.Heros.*;
 
 public class ExistingHero extends Hero{
 	public ExistingHero(String name, String type, int attack, int defence, int health, Weapon weapon, Armour armour, Helm helm, int potions, int level, int experience){
